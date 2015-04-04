@@ -1,0 +1,1 @@
+# vagrant-rails-on-digitalocean
