@@ -18,16 +18,17 @@ $ vagrant up --provider=digital_ocean
 # Packgate Update
 
 ```
-$ apt-get update -y
-$ apt-get install {TODO}
+$ apt-get update -y && apt-get upgrade -y
+$ apt-get install vim libsqlite3-dev zlib1g-dev
 ```
 
 # Get latest ruby version via RVM
 
 ```
+$ curl -sSL https://rvm.io/mpapis.asc | gpg --import -curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 $ rvm get stable && rvm install ruby
-$ gem install bundler
-$ gem install unicorn
+$ gem install bundler unicorn
+$ cd /home/rails/ && bundle install && bundle update
 ```
 
 Modify Ruby version used by unicorn.
