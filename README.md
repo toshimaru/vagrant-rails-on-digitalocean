@@ -15,6 +15,13 @@ Create Ruby on Rails droplet on DigitalOcean via vagrant.
 $ vagrant up --provider=digital_ocean
 ```
 
+# Packgate Update
+
+```
+$ apt-get update -y
+$ apt-get install {TODO}
+```
+
 # Get latest ruby version via RVM
 
 ```
@@ -66,7 +73,7 @@ $ curl -X GET -H 'Content-Type: application/json' -H 'Authorization: Bearer {you
 # Value for `provider.region`
 
 ```
-✗ curl -X GET -H 'Content-Type: application/json' -H 'Authorization: Bearer {your_token}' "https://api.digitalocean.com/v2/regions" | jq ".regions[].slug"
+$ curl -X GET -H 'Content-Type: application/json' -H 'Authorization: Bearer {your_token}' "https://api.digitalocean.com/v2/regions" | jq ".regions[].slug"
 
 "nyc1"
 "ams1"
